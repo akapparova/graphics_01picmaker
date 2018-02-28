@@ -1,7 +1,7 @@
 all: Image.java
 	javac Image.java
-run: all
 	java Image
+	display image.ppm
 clean:
-	rm Image.class
-	rm image.ppm
+	rm *.class
+	rm *.ppm

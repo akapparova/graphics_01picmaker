@@ -4,20 +4,22 @@ public class Image{
 
 	public static void main(String[] args){
 		try {
-			FileWriter x = new FileWriter("image.ppm");
-			BufferedWriter y = new BufferedWriter(x);
-			y.write("P3\n550 550\n255\n");
+			FileWriter xD = new FileWriter("image.ppm");
+			BufferedWriter yD = new BufferedWriter(xD);
+			yD.write("P3\n550 550\n255\n");
+			int x=0;
+			int y=0;
+			int z=0;
 			for (int i = 0; i < 550; i ++){
 				for (int j = 0; j < 550; j ++){
-					y.write(s + s);
+					yD.write(Integer.toString(x) + " " + Integer.toString(y) + " " + Integer.toString(z) + " ");
+					x+=3;
+					y+=2;
+					//z *=2;
 				}
-				y.newLine();
-				for (int j = 0; j < 256; j ++){
-					String s = "0 " + Integer.toString(i) + " " + Integer.toString(j) + " ";
-					y.write(s + s);
-				}
+				yD.newLine();
 			}
-			y.close();
+			yD.close();
 		}
 
 
