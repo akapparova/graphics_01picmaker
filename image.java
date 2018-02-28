@@ -13,10 +13,10 @@ public class Image{
 			for (int i = 0; i < 550; i ++){
 				for (int j = 0; j < 550; j ++){
 					yD.write(Integer.toString(x) + " " + Integer.toString(y) + " " + Integer.toString(z) + " ");
-					x+=3;
-					y+=2;
-					//z *=2;
+					z +=2;
 				}
+				x+=1;
+				y+=1;
 				yD.newLine();
 			}
 			yD.close();
